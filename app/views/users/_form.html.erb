@@ -1,0 +1,69 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_city %><br>
+    <%= f.text_field :birth_city %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :whatsApp %><br>
+    <%= f.check_box :whatsApp %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.check_box :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :skype %><br>
+    <%= f.check_box :skype %>
+  </div>
+  <div class="field">
+    <%= f.label :google_plus %><br>
+    <%= f.check_box :google_plus %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.check_box :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :mov_five_star %><br>
+    <%= f.check_box :mov_five_star %>
+  </div>
+  <div class="field">
+    <%= f.label :meet_up %><br>
+    <%= f.check_box :meet_up %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
